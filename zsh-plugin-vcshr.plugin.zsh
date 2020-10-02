@@ -27,8 +27,6 @@ function vcshr {
 	local repo="$3"
 
 	if [[ $(vcsh list) == *"$name"* ]]; then
-		echo "$name already exists:"
-		vcsh list
 		return; # You already have it in your list, fail gracefully.
 	fi
 
